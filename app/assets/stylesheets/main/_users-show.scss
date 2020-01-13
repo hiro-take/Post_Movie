@@ -1,0 +1,28 @@
+.main-user-show{
+  background-color: #f5f5f5;
+  .movieTitle{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid red;
+  }
+  .main-movie-search-box{
+    background-color: floralwhite;
+    h3{
+      font-size: 200%;
+      font-weight: bold;
+      line-height: 100px;
+      text-align: center;
+      font-style: italic;
+    }
+    @include clearfix();
+    &-box{  
+      padding-top: 100px;
+      .figure{
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}

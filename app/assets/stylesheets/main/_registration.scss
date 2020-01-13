@@ -1,0 +1,36 @@
+a{
+  font-style: italic;
+  font-weight: bold;
+}
+.main-registration{
+  height: 1000px;
+  width: 100vw;
+  background-color: #f5f5f5;
+  @include clearfix();
+  .content__title__name{
+    text-align: center;
+    vertical-align: middle;
+    h2{
+      font-size: 200%;
+      font-weight: bold;
+      line-height: 200px;
+
+    }
+  }
+}
+.field{
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+.actions{
+  .submit{
+  background-color: red;
+  width: 300px;
+  height: 40px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  /* display: block; */
+  color: blanchedalmond;}
+}

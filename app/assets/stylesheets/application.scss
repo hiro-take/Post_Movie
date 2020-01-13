@@ -1,0 +1,14 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import'reset';
+@import "mixins/vendor_prefix";
+@import "config/color";
+@import'layout';
+@import'main/movies-index';
+@import'main/movies-new';
+@import'main/users-show';
+@import'main/movies-show';
+@import'main/youtubes';
+@import'main/registration';
+@import'main/sessions';
+@import'main/search';

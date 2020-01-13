@@ -1,0 +1,44 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.notification {
+  .notice {
+    background-color: $light_blue;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
+  }
+}
+
+.header{
+  display: flex;
+  .fa.fa-youtube-play{
+    font-size: 48px;
+    color: red;
+    margin-left: 50px;
+  }  
+  .search-box{
+    margin: 10px auto;
+    form{
+      display: flex;
+      input{
+        width: 300px;
+      }
+    }
+  }
+  .user-box{
+    margin: 10px auto;
+    .log--btn{
+    margin: 20px;
+    }
+  }
+}
+ 
+

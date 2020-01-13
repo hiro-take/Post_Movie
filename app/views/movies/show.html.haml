@@ -1,0 +1,38 @@
+.main-movie-show{"data-movie-id": "#{@movie.id}"} 
+  .content-left
+    .movie
+      .movie__Data
+        = video_tag @movie.video.url,loop: true, controls: true, width: 800, id: "",  class: "video"
+      .movie__add
+      - if user_signed_in? && current_user.id == @movie.user_id 
+        .movie__add__Manage
+          = link_to edit_movie_path(@movie.id), class: "movie__add__Manage__edit"  do
+            編集
+          = link_to movie_path(@movie.id), method: :delete, class: "movie__add__Manage__delete" do
+            削除
+      .movie__Title
+        = @movie.title
+      .movie__Date
+        = @movie.created_at.in_time_zone('Tokyo').strftime("%Y/%m/%d %H:%M")
+      .movie__Description
+        [投稿者コメント]
+        = simple_format @movie.description,  class: "movieDescription-comment"
+      .movie__Comment
+        - if current_user
+          = form_for [@movie, @comment], id: "new_comment" do |f|
+            = f.text_area :text, placeholder: 'コメント',class:'movie__Comment-text',id:'movie__Comment-text'
+            = f.submit "送信", class:'movie__Comment-btn', id:'movie__Comment-btn'
+        - else
+          ※※※ コメントの投稿には新規登録/ログインが必要です ※※
+  .content-right
+    .comments-text
+      - @comments.each do |comment| 
+        .comments-text-box{"data-comment-id": "#{comment.id}"}
+          .nickname
+            = comment.user.nickname
+            .day
+              = comment.created_at.in_time_zone('Tokyo').strftime("%Y/%m/%d %H:%M")
+          .text
+            = comment.text
+
+

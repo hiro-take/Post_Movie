@@ -1,0 +1,22 @@
+.main-movie-index{
+  @include clearfix();
+  .api-box{
+    float: left;
+    height: 500px;
+    width: 700px;
+    .title-api{
+      margin-top: 20px;
+      text-align: center;
+    }
+    .movieadd-api{
+      margin-top: 20px;
+      text-align: center;
+    }
+    .movie-api{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  
+}
+

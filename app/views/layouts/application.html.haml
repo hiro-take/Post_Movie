@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    %title YouTube
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    = render 'layouts/notifications'
+    .header
+      = link_to root_path do
+        .fa.fa-youtube-play
+      .search-box
+        = form_tag( search_movies_path, method: :get,class: "point3") do
+          %input{ name:"keyword", placeholder:"検索", type:"text"}
+          %button{type:"submit"}
+            .fa.fa-search
+      .search-box
+        = form_tag( youtubes_path, method: :get,class: "point3") do
+          %input{ name:"keyword2", placeholder:"検索(youtube)", type:"text"}
+          %button{type:"submit"}
+            .fa.fa-search
+      .user-box
+        - if user_signed_in?
+          = link_to  user_path(current_user) ,class:"log--btn"do
+            = current_user.nickname
+          = link_to "新規投稿", new_movie_path, class: "log--btn"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log--btn"
+        - else
+          = link_to "ログイン", new_user_session_path, class: "log--btn"
+          = link_to "新規登録", new_user_registration_path, class: "log--btn"
+    = yield

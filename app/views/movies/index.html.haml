@@ -1,0 +1,17 @@
+.main-movie-index
+  .main-movie-index-box
+    %h3 Post_Movie
+    - @movies.each do |movie|
+      = link_to  movie_path(movie.id), class: "content__right__top--title" do
+        .figure
+          = image_tag movie.image.url,size: "250x150"
+          .title
+            = movie.title
+          .day
+            = movie.created_at.in_time_zone('Tokyo').strftime("%Y/%m/%d %H:%M")
+          .name
+            = link_to user_path(movie.user)  do
+              = movie.user.nickname
+
+= render "footer"
+

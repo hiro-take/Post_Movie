@@ -1,0 +1,109 @@
+.main-movie-show{
+  background-color: #f5f5f5;
+  @include clearfix();
+  .content-left{
+    float: left;
+    .movie{
+      padding: 30px;
+      width: 800px;
+      &__Data{
+        .video{
+        }
+      }
+      &__add{
+        font-size: 15px;
+        color: #999;
+        text-align: center;
+        &__Manage{
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+          &__edit{
+            display: block;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color:#55c500;
+            padding: 0 10px;
+            text-decoration: none;
+            margin-right: 10px;
+          }
+          &__delete{
+            display: block;
+            border-radius: 5px;
+            color: #ffffff;
+            background-color:#55c500;
+            padding: 0 10px;
+            text-decoration: none;
+            margin-left: 10px;
+          }
+        }
+      }
+      &__Title{
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &__Date{
+        font-size: 15px;
+        color: #999;
+        border-bottom: 3px solid lightsteelblue;
+      }
+      &__Description{
+        padding-top: 20px;
+        font-weight: bold;
+        border-bottom: 3px solid lightsteelblue;
+        &-comment{
+          line-height: 30px;
+        }
+      }
+      &__Comment{
+        height: 100px;
+        border-bottom: 3px solid lightsteelblue;
+        &-text{
+          width: 100%;
+          margin-top: 15px;
+        }
+        &-btn{
+          float: right;
+        }
+      }
+    }
+  }
+  .content-right{
+    float: right;
+    width: 500px;
+    border: 1px solid red;
+    background-color: antiquewhite;
+    margin-top: 30px;
+    margin-right: 20px;
+    height: 500px;
+    overflow: scroll;
+    .comments-text{
+      margin: 25px auto;
+      width: 400px;
+      @include clearfix();
+      &-box{
+        line-height: 30px;
+        margin-bottom: 30px;
+        width: 250px;
+        .nickname{
+          font-style: italic;
+          font-size: 20px;
+          line-height: 30px;
+          display: flex;
+          border-bottom: 1px solid;
+          .day{
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.postText{
+  margin: 20px 30px;
+}

@@ -1,0 +1,15 @@
+.main-movie-new
+  .content__title
+    .content__title__name
+      動画投稿
+    .form
+    = form_for @movies do |f|
+      = f.text_field :title, class: 'form__title', placeholder: 'タイトル'
+      = f.text_area :description, placeholder: '投稿者コメント', class: 'form__description'
+      = f.label :video, class: 'form__mask' do
+        動画をアップロード
+        = f.file_field :video, class: 'form__video'
+      = f.label :image, class: 'form__mask' do
+        サムネイルをアップロード
+        = f.file_field :image, class: 'form__image'
+      = f.submit "送信", class:'form__btn'
