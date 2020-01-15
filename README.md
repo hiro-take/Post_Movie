@@ -4,7 +4,9 @@
 
 
 ・「Post_Movie」は、動画の投稿、視聴、コメント機能を搭載したアプリケーションです。
-test2
+
+heroku url
+https://sleepy-beach-24364.herokuapp.com
 
  
 # Background
