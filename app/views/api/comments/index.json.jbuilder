@@ -1,7 +1,7 @@
-json.array! @messages do |message|
-  json.content message.content
-  json.image message.image.url
-  json.created_at message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  json.user_name message.user.name
-  json.id message.id
+json.array! @comments do |comment|
+  json.text comment.text
+  json.created_at comment.created_at.in_time_zone('Tokyo').strftime("%Y/%m/%d %H:%M")
+  json.user_name comment.user.nickname
+  json.id comment.id
 end
+
